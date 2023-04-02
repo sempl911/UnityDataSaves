@@ -134,3 +134,24 @@ Received Import Request.
 Start importing Assets/Scripts/SaveManager/SaveManager.cs using Guid(5a3618db680d5405c98208a746111b6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e2d39155c548c5cccd96677029cc09d') in 3.121871 seconds
   Import took 3.127365 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001190 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.767 seconds
+Platform modules already initialized, skipping
+Shader 'Universal Render Pipeline/Particles/Lit': fallback shader 'Universal Render Pipeline/Particles/SimpleLit' not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2316 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 182.0 MB.
+System memory in use after: 182.2 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 2885.
+Total: 6.632236 ms (FindLiveObjects: 0.649669 ms CreateObjectMapping: 0.344586 ms MarkObjects: 5.613623 ms  DeleteObjects: 0.021970 ms)
+
