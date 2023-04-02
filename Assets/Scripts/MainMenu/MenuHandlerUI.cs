@@ -7,20 +7,21 @@ using TMPro;
 
 public class MenuHandlerUI : MonoBehaviour
 {
-    public TMP_InputField playerName;
+    public TMP_InputField user_inputField;
+    public TextMeshProUGUI user_name;
 
-    void Start()
+    private void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            setName();
+        }
     }
 
-    void Update()
+    public void setName()
     {
-        TakeName();
-    }
-    public void TakeName()
-    {
-        Debug.Log(playerName.text);
+        user_name.text  = user_inputField.text ;
+        SaveManager.Instance.userName = user_name.text;
     }
     public void StartNew()
     {
