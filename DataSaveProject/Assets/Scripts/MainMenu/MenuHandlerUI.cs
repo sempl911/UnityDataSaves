@@ -9,6 +9,7 @@ public class MenuHandlerUI : MonoBehaviour
 {
     public TMP_InputField user_inputField;
     public TextMeshProUGUI user_name;
+    public TextMeshProUGUI bestScoreInt;
 
     private void Start()
     {
@@ -51,5 +52,6 @@ public class MenuHandlerUI : MonoBehaviour
     {
         SaveManager.Instance.LoadDataPlayer();
         user_name.text = SaveManager.Instance.userName;
+        bestScoreInt.text = SaveManager.Instance.bestScore.ToString();
     }
 }

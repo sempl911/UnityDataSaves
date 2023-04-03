@@ -36,7 +36,6 @@ public class SaveManager : MonoBehaviour
             string json = JsonUtility.ToJson(dataName);
 
             File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
-        Debug.Log("saved");
         }
         public void LoadDataPlayer()
         {
@@ -47,7 +46,6 @@ public class SaveManager : MonoBehaviour
                 SaveData data = JsonUtility.FromJson<SaveData>(json);
                 userName = data.name;
                 bestScore = data.bestScore;
-            Debug.Log("Loaded" + userName);
             }
         }
     

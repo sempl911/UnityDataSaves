@@ -43,7 +43,7 @@ public class MainManager : MonoBehaviour
         }
 
         AddPlayerName();
-        AddBestScoreText();
+        SaveManager.Instance.LoadDataPlayer();
     }
 
     private void Update()
@@ -68,12 +68,15 @@ public class MainManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
             }
         }
+        AddBestScoreText();
     }
 
     void AddPoint(int point)
     {
         m_Points += point;
         ScoreText.text = $"Score : {m_Points}";
+        bestScore = m_Points;
+        Debug.Log(bestScore);
     }
 
     public void GameOver()
@@ -89,9 +92,11 @@ public class MainManager : MonoBehaviour
     }
     void AddBestScoreText()
     {
-        bestScoreText.text = bestScore.ToString();
-        SaveManager.Instance.bestScore = bestScore;
-        Debug.Log(bestScore);
+        bestScoreText.text = SaveManager.Instance.bestScore.ToString();
+        if (bestScore > SaveManager.Instance.bestScore)
+        {
+            SaveManager.Instance.bestScore = bestScore;
+        }
     }
     
 }
