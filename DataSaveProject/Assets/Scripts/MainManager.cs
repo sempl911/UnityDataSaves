@@ -73,7 +73,6 @@ public class MainManager : MonoBehaviour
     void AddPoint(int point)
     {
         m_Points += point;
-        bestScore = m_Points;
         ScoreText.text = $"Score : {m_Points}";
     }
 
@@ -91,6 +90,8 @@ public class MainManager : MonoBehaviour
     void AddBestScoreText()
     {
         bestScoreText.text = bestScore.ToString();
+        SaveManager.Instance.bestScore = bestScore;
+        Debug.Log(bestScore);
     }
     
 }

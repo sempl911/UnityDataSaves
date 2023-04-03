@@ -50,5 +50,6 @@ public class MenuHandlerUI : MonoBehaviour
     public void LoadData()
     {
         SaveManager.Instance.LoadDataPlayer();
+        user_name.text = SaveManager.Instance.userName;
     }
 }

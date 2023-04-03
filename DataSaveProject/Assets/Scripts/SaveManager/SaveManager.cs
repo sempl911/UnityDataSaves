@@ -47,7 +47,7 @@ public class SaveManager : MonoBehaviour
                 SaveData data = JsonUtility.FromJson<SaveData>(json);
                 userName = data.name;
                 bestScore = data.bestScore;
-            Debug.Log("Loaded");
+            Debug.Log("Loaded" + userName);
             }
         }
     
